@@ -70,12 +70,19 @@ footer {
 }
 
 .nav-buttons button {
-    background: #c58af0;
+    background: #a435f0;
     color: #fff;
     padding: 8px 15px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    border: 1px solid #a435f0;
+}
+
+.nav-buttons button:hover {
+    transition: 1s;
+    background-color: transparent;
+    color: black;
 }
 
 .hero {
@@ -90,6 +97,22 @@ footer {
     width: 240px;
     padding: 20px;
     border: 1px solid silver;
+    animation: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .mylearning {
